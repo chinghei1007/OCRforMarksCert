@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e552b04c-0c29-4a04-b1a6-9e4e7a37784d",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.sequence.json",
+  "output": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.html",
+  "specification": {
+    "sha256": "440b4ef3d05fe69a0658c63fcba4bf5e11e642254d49e630c106adadc33c0e74",
+    "bytes": 3655
+  },
+  "artifact": {
+    "sha256": "5e334080775aa51eba4f4d5f744c0f4b3af9edf3393db7cc5ec8afcd739886b4",
+    "bytes": 839146
+  }
+}

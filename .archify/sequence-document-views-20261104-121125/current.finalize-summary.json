@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "skipped",
+  "type": "sequence",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.sequence.json",
+    "sha256": "440b4ef3d05fe69a0658c63fcba4bf5e11e642254d49e630c106adadc33c0e74",
+    "bytes": 3655
+  },
+  "artifact": {
+    "path": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.html",
+    "sha256": "5e334080775aa51eba4f4d5f744c0f4b3af9edf3393db7cc5ec8afcd739886b4",
+    "bytes": 839146
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "skipped"
+  },
+  "failedStage": "browser-check",
+  "diagnostics": [
+    {
+      "code": "viewer/chrome-unavailable",
+      "severity": "warning",
+      "message": "No supported browser found. Install Chrome/Chromium (or Microsoft Edge), or set ARCHIFY_CHROME to its executable path.",
+      "subject": {
+        "artifact": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.html"
+      },
+      "evidence": {
+        "executable": null
+      },
+      "supportedFixes": [
+        "set ARCHIFY_CHROME to a Chrome/Chromium executable (or Microsoft Edge) and rerun browser-check"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 1,
+    "shown": 1,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.finalize.json",
+    "summaryReceipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.finalize-summary.json",
+    "browserCheckReceipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/current.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T04:56:29.439Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 396,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  }
+}

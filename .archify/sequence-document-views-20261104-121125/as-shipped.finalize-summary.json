@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "skipped",
+  "type": "sequence",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/as-shipped.sequence.json",
+    "sha256": "4ecb2d4b696161f1ff41e55d59db459f307961585b71aa50d5a2955c78dc513c",
+    "bytes": 3901
+  },
+  "artifact": {
+    "path": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/as-shipped.html",
+    "sha256": "7e4916887d119545ab44ec7e6d90ee9f49d6503fce4a5403f3d8e3d328fd0214",
+    "bytes": 839834
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "skipped"
+  },
+  "failedStage": "browser-check",
+  "diagnostics": [
+    {
+      "code": "viewer/chrome-unavailable",
+      "severity": "warning",
+      "message": "No supported browser found. Install Chrome/Chromium (or Microsoft Edge), or set ARCHIFY_CHROME to its executable path.",
+      "subject": {
+        "artifact": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/as-shipped.html"
+      },
+      "evidence": {
+        "executable": null
+      },
+      "supportedFixes": [
+        "set ARCHIFY_CHROME to a Chrome/Chromium executable (or Microsoft Edge) and rerun browser-check"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 1,
+    "shown": 1,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/as-shipped.finalize.json",
+    "summaryReceipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/as-shipped.finalize-summary.json",
+    "browserCheckReceipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/as-shipped.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T04:56:29.439Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 350,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "skipped",
+  "type": "sequence",
+  "quality": "showcase",
+  "startedAt": "2026-11-04T04:13:50.219Z",
+  "specification": {
+    "path": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.sequence.json",
+    "sha256": "99fc083b486e3543652080f0de89a63da4856d6d1e73fd99bb6383127d906eaf",
+    "bytes": 3822
+  },
+  "artifact": {
+    "path": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+    "sha256": "69bd8ef1e7f53f489f6b09e5e847fe42a18f9c4e8e99d2189661857ecf986a54",
+    "bytes": 839709
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/useroctopus-tech.com/Library/Application Support/orca/codex-accounts/0c0c5bde-be9a-4f6d-8de1-8bc461f0df9f/home/skills/archify/bin/archify.mjs",
+        "deliver",
+        "sequence",
+        "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.sequence.json",
+        "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "99fc083b486e3543652080f0de89a63da4856d6d1e73fd99bb6383127d906eaf",
+          "bytes": 3822
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 172,
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/useroctopus-tech.com/Library/Application Support/orca/codex-accounts/0c0c5bde-be9a-4f6d-8de1-8bc461f0df9f/home/skills/archify/bin/archify.mjs",
+        "deliver",
+        "sequence",
+        "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.sequence.json",
+        "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "5e1a7bea-bc86-4280-9d85-b1aff21b1b5a",
+        "ok": true,
+        "command": "deliver",
+        "type": "sequence",
+        "input": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.sequence.json",
+        "output": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+        "specification": {
+          "sha256": "99fc083b486e3543652080f0de89a63da4856d6d1e73fd99bb6383127d906eaf",
+          "bytes": 3822
+        },
+        "artifact": {
+          "sha256": "69bd8ef1e7f53f489f6b09e5e847fe42a18f9c4e8e99d2189661857ecf986a54",
+          "bytes": 839709
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 112,
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/useroctopus-tech.com/Library/Application Support/orca/codex-accounts/0c0c5bde-be9a-4f6d-8de1-8bc461f0df9f/home/skills/archify/bin/archify.mjs",
+        "check",
+        "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+        "artifact": {
+          "sha256": "69bd8ef1e7f53f489f6b09e5e847fe42a18f9c4e8e99d2189661857ecf986a54",
+          "bytes": 839709
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 10,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6.182336182336183,
+            "maxBends": 0,
+            "routesOverSuggestedBends": 0,
+            "maxStretch": 1,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 150,
+            "minInteriorSegmentPx": null,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": []
+          },
+          "leadingSpace": {
+            "measured": false,
+            "reviewSuggested": false
+          },
+          "sequenceColumnSpace": {
+            "measured": true,
+            "columnFit": "spread",
+            "participantCount": 6,
+            "occupiedRight": 1013,
+            "viewBoxLeft": 0,
+            "canvasWidth": 1053,
+            "emptyRightPx": 40,
+            "emptyRightRatio": 0.038,
+            "typicalParticipantWidth": 131,
+            "reviewSuggested": false
+          },
+          "sequenceNoteBorders": [
+            {
+              "code": "sequence/note-segment-border",
+              "reviewSuggested": true,
+              "message": "Note on message \"render image or PDF page\" ends at y=367, crossing its segment bottom y=350. Set /segments/0/to to 371 to keep the full note inside.",
+              "subject": {
+                "diagramType": "sequence",
+                "path": "/messages/4/note"
+              },
+              "evidence": {
+                "note": {
+                  "x": 310.5,
+                  "y": 336,
+                  "width": 130.19999999999993,
+                  "height": 30.75
+                },
+                "lines": 3,
+                "messageY": 325,
+                "segment": {
+                  "path": "/segments/0/to",
+                  "from": 150,
+                  "to": 350
+                },
+                "requiredTo": 371
+              },
+              "supportedFixes": [
+                "set /segments/0/to to 371"
+              ]
+            }
+          ],
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": null,
+            "requestedTargetMet": null,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "edge",
+              "id": "open-view",
+              "from": "reviewer",
+              "to": "browser"
+            },
+            "minimumSourceTextPx": 7,
+            "minimumProjectedTextPx": 6.182336182336183,
+            "semanticTextCount": 27
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "5e1a7bea-bc86-4280-9d85-b1aff21b1b5a"
+      }
+    },
+    "browser-check": {
+      "status": "skipped",
+      "exitCode": 2,
+      "durationMs": 9,
+      "command": [
+        "/usr/local/bin/node",
+        "/Users/useroctopus-tech.com/Library/Application Support/orca/codex-accounts/0c0c5bde-be9a-4f6d-8de1-8bc461f0df9f/home/skills/archify/bin/archify.mjs",
+        "browser-check",
+        "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+        "--json",
+        "--require-provenance"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "skipped",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "5e1a7bea-bc86-4280-9d85-b1aff21b1b5a",
+        "artifact": {
+          "path": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html",
+          "sha256": "69bd8ef1e7f53f489f6b09e5e847fe42a18f9c4e8e99d2189661857ecf986a54",
+          "bytes": 839709
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "unavailable",
+          "executable": null
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/chrome-unavailable",
+            "severity": "warning",
+            "message": "No supported browser found. Install Chrome/Chromium (or Microsoft Edge), or set ARCHIFY_CHROME to its executable path.",
+            "subject": {
+              "artifact": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html"
+            },
+            "evidence": {
+              "executable": null
+            },
+            "supportedFixes": [
+              "set ARCHIFY_CHROME to a Chrome/Chromium executable (or Microsoft Edge) and rerun browser-check"
+            ]
+          }
+        ],
+        "containment": {
+          "status": "skipped",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": []
+        },
+        "themeStates": {
+          "status": "skipped",
+          "viewports": []
+        },
+        "readability": {
+          "status": "skipped",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": []
+        },
+        "viewerChrome": {
+          "status": "skipped",
+          "viewports": []
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "receipt": "preview.browser-check.json",
+          "files": []
+        },
+        "error": "No supported browser found. Install Chrome/Chromium (or Microsoft Edge), or set ARCHIFY_CHROME to its executable path."
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/chrome-unavailable",
+      "severity": "warning",
+      "message": "No supported browser found. Install Chrome/Chromium (or Microsoft Edge), or set ARCHIFY_CHROME to its executable path.",
+      "subject": {
+        "artifact": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.html"
+      },
+      "evidence": {
+        "executable": null
+      },
+      "supportedFixes": [
+        "set ARCHIFY_CHROME to a Chrome/Chromium executable (or Microsoft Edge) and rerun browser-check"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.finalize.json",
+    "summaryReceipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.finalize-summary.json",
+    "browserCheckReceipt": "/Users/useroctopus-tech.com/orca/projects/OCRforMarksCert/.archify/sequence-document-views-20261104-121125/preview.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "browser-check",
+  "finishedAt": "2026-11-04T04:13:50.601Z",
+  "durationMs": 381,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T04:56:29.439Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

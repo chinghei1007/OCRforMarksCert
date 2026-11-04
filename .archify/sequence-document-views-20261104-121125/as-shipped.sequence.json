@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "AS-SHIPPED — routed document views and recoverable processing",
+    "output": ".archify/sequence-document-views-20261104-121125/as-shipped.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "all",
+      "entries": {
+        "default": { "label": "Synchronous request" },
+        "emphasis": { "label": "Primary user-visible action" },
+        "dashed": { "label": "Recoverable async work" },
+        "return": { "label": "Response" }
+      }
+    }
+  },
+  "participants": [
+    { "id": "reviewer", "type": "external", "label": "Reviewer", "sublabel": "deep-linked views" },
+    { "id": "browser", "type": "frontend", "label": "React UI", "sublabel": "review · json · activity" },
+    { "id": "api", "type": "backend", "label": "Express API", "sublabel": "status-aware controller" },
+    { "id": "db", "type": "database", "label": "SQLite", "sublabel": "documents + attempts + events" },
+    { "id": "worker", "type": "backend", "label": "OCR worker", "sublabel": "resumable attempts" },
+    { "id": "files", "type": "database", "label": "Source renderer", "sublabel": "image or PDF page" }
+  ],
+  "segments": [
+    { "from": 150, "to": 350, "label": "Addressable views and source interaction" },
+    { "from": 380, "to": 660, "label": "Correct reprocess and restart recovery" }
+  ],
+  "messages": [
+    { "id": "open-view", "from": "reviewer", "to": "browser", "y": 170, "label": "open /documents/:id/:view", "variant": "emphasis", "note": "Supported views are review, json and activity; /documents/:id redirects to review." },
+    { "id": "load-document", "from": "browser", "to": "api", "y": 230, "label": "GET /api/documents/:id" },
+    { "id": "read-document", "from": "api", "to": "db", "y": 260, "label": "read revision + attempts + events" },
+    { "id": "return-detail", "from": "db", "to": "browser", "y": 290, "label": "document view model", "variant": "return" },
+    { "id": "render-page", "from": "browser", "to": "files", "y": 325, "label": "render image or PDF page", "variant": "emphasis", "note": "PDF page count drives disabled boundaries and real previous/next navigation." },
+    { "id": "save-region", "from": "reviewer", "to": "browser", "y": 400, "label": "draw normalized source region", "variant": "emphasis" },
+    { "id": "persist-region", "from": "browser", "to": "api", "y": 430, "label": "PATCH immutable revision" },
+    { "id": "request-reprocess", "from": "reviewer", "to": "browser", "y": 465, "label": "Reject draft or reprocess approved" },
+    { "id": "post-reprocess", "from": "browser", "to": "api", "y": 495, "label": "POST status-aware reprocess" },
+    { "id": "correct-event", "from": "api", "to": "db", "y": 525, "label": "draft.rejected OR document.reprocess_requested" },
+    { "id": "run-model", "from": "api", "to": "worker", "y": 555, "label": "run attempt", "variant": "dashed" },
+    { "id": "resume-at-startup", "from": "api", "to": "db", "y": 610, "label": "startup: find queued/running", "variant": "dashed" },
+    { "id": "resume-worker", "from": "api", "to": "worker", "y": 640, "label": "resume idempotently", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Verified end state",
+      "items": [
+        "3 addressable views per document",
+        "0 visible no-op controls",
+        "PDF page navigation uses real page count",
+        "Every pending attempt reaches Draft or Failed after restart",
+        "10/10 browser scenarios and 3/3 integration tests pass"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "E2E gate",
+      "items": [
+        "Deep-link and redirect coverage",
+        "Two-page PDF render and boundary controls",
+        "Draw-region persistence and reload",
+        "Filters, export menu, mobile overflow and activity history"
+      ]
+    }
+  ]
+}

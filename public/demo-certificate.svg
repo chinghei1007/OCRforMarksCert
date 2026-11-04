@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 760">
+  <rect width="1080" height="760" fill="#fff"/>
+  <rect x="38" y="38" width="1004" height="684" fill="none" stroke="#cad4dc" stroke-width="3"/>
+  <rect x="55" y="55" width="970" height="650" fill="none" stroke="#e0e5e8" stroke-width="1"/>
+  <text x="540" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" letter-spacing="8" fill="#66727b">CERTIFICATE OF ACHIEVEMENT</text>
+  <text x="540" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#79858e">This certificate is presented to</text>
+  <text x="540" y="335" text-anchor="middle" font-family="Georgia, serif" font-size="56" fill="#27313a">Amy Lee</text>
+  <line x1="300" y1="365" x2="780" y2="365" stroke="#cbd3d8" stroke-width="2"/>
+  <text x="540" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" fill="#4c5962">Mathematics Competition · Gold Award</text>
+  <text x="540" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7a868e">Hong Kong · 2026</text>
+  <circle cx="820" cy="570" r="55" fill="#eef2f5" stroke="#aebac3" stroke-width="2"/>
+  <text x="820" y="578" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#65717a">OFFICIAL</text>
+</svg>

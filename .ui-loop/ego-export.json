@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0",
+  "exportedAt": "2026-11-04T04:31:06.099Z",
+  "documents": [
+    {
+      "id": "doc-2026-00418",
+      "filename": "hong_kong_result.jpg",
+      "mimeType": "image/jpeg",
+      "pageCount": 1,
+      "status": "draft",
+      "documentType": "School result",
+      "updatedAt": "2026-11-04T04:30:33.769Z",
+      "updatedBy": "service:ocr-worker",
+      "version": 1,
+      "attemptNumber": 1,
+      "attemptStatus": "succeeded",
+      "sourceUrl": "/demo-document.svg",
+      "fields": [
+        {
+          "id": "fld-student-name",
+          "key": "student_name",
+          "label": "Student name",
+          "value": "Jane Chan",
+          "confidence": 0.96,
+          "origin": "model",
+          "source": {
+            "page": 1,
+            "boundingBox": {
+              "x": 0.21,
+              "y": 0.245,
+              "width": 0.59,
+              "height": 0.055
+            }
+          }
+        },
+        {
+          "id": "fld-school",
+          "key": "school",
+          "label": "School",
+          "value": "Harbour Secondary School",
+          "confidence": 0.98,
+          "origin": "model",
+          "source": {
+            "page": 1,
+            "boundingBox": {
+              "x": 0.18,
+              "y": 0.085,
+              "width": 0.64,
+              "height": 0.05
+            }
+          }
+        },
+        {
+          "id": "fld-year",
+          "key": "academic_year",
+          "label": "Academic year",
+          "value": "2025–2026",
+          "confidence": 0.91,
+          "origin": "model",
+          "source": {
+            "page": 1,
+            "boundingBox": {
+              "x": 0.22,
+              "y": 0.315,
+              "width": 0.35,
+              "height": 0.04
+            }
+          }
+        },
+        {
+          "id": "fld-english",
+          "key": "english_language",
+          "label": "English Language",
+          "value": "B+",
+          "confidence": 0.92,
+          "origin": "model",
+          "source": {
+            "page": 1,
+            "boundingBox": {
+              "x": 0.63,
+              "y": 0.475,
+              "width": 0.16,
+              "height": 0.04
+            }
+          }
+        },
+        {
+          "id": "fld-maths",
+          "key": "mathematics",
+          "label": "Mathematics",
+          "value": "A",
+          "confidence": 0.94,
+          "origin": "model",
+          "source": {
+            "page": 1,
+            "boundingBox": {
+              "x": 0.63,
+              "y": 0.535,
+              "width": 0.16,
+              "height": 0.04
+            }
+          }
+        },
+        {
+          "id": "fld-physics",
+          "key": "physics",
+          "label": "Physics",
+          "value": "A−",
+          "confidence": 0.88,
+          "origin": "model",
+          "source": {
+            "page": 1,
+            "boundingBox": {
+              "x": 0.63,
+              "y": 0.595,
+              "width": 0.16,
+              "height": 0.04
+            }
+          }
+        },
+        {
+          "id": "fld-overall",
+          "key": "overall_grade",
+          "label": "Overall grade",
+          "value": "A−",
+          "confidence": 0.67,
+          "origin": "model",
+          "source": {
+            "page": 1,
+            "boundingBox": {
+              "x": 0.63,
+              "y": 0.655,
+              "width": 0.16,
+              "height": 0.04
+            }
+          }
+        }
+      ],
+      "revisionNumber": 1,
+      "events": [
+        {
+          "id": "c6458552-904a-400e-be51-cefaef5f3dcf",
+          "eventType": "document.uploaded",
+          "fromStatus": null,
+          "toStatus": "not_started",
+          "actorType": "service",
+          "actorId": "ocr-worker",
+          "actorName": null,
+          "createdAt": "2026-11-04T04:30:33.769Z",
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}

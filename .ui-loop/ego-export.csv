@@ -1,0 +1,8 @@
+"document_id","status","document_type","filename","updated_at","updated_by","revision","field_order","field_key","field_label","field_value","confidence","page","box_x","box_y","box_width","box_height"
+"doc-2026-00418","draft","School result","hong_kong_result.jpg","2026-11-04T04:31:59.670Z","service:ocr-worker","3","0","student_name","Student name","Jane Chan","0.96","1","0.21","0.245","0.59","0.055"
+"doc-2026-00418","draft","School result","hong_kong_result.jpg","2026-11-04T04:31:59.670Z","service:ocr-worker","3","1","school","School","Harbour Secondary School","0.98","1","0.18","0.085","0.64","0.05"
+"doc-2026-00418","draft","School result","hong_kong_result.jpg","2026-11-04T04:31:59.670Z","service:ocr-worker","3","2","academic_year","Academic year","2025–2026","0.91","1","0.22","0.315","0.35","0.04"
+"doc-2026-00418","draft","School result","hong_kong_result.jpg","2026-11-04T04:31:59.670Z","service:ocr-worker","3","3","english_language","English Language","B+","0.92","1","0.63","0.475","0.16","0.04"
+"doc-2026-00418","draft","School result","hong_kong_result.jpg","2026-11-04T04:31:59.670Z","service:ocr-worker","3","4","mathematics","Mathematics","A","0.94","1","0.63","0.535","0.16","0.04"
+"doc-2026-00418","draft","School result","hong_kong_result.jpg","2026-11-04T04:31:59.670Z","service:ocr-worker","3","5","physics","Physics","A−","0.88","1","0.63","0.595","0.16","0.04"
+"doc-2026-00418","draft","School result","hong_kong_result.jpg","2026-11-04T04:31:59.670Z","service:ocr-worker","3","6","overall_grade","Overall grade","A−","0.67","1","0.63","0.655","0.16","0.04"

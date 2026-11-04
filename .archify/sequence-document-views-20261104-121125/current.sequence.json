@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "CURRENT — document view and reprocess flow",
+    "output": ".archify/sequence-document-views-20261104-121125/current.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "all",
+      "entries": {
+        "default": { "label": "Synchronous request" },
+        "emphasis": { "label": "Broken or misleading behavior" },
+        "dashed": { "label": "Async work" },
+        "return": { "label": "Response" }
+      }
+    }
+  },
+  "participants": [
+    { "id": "reviewer", "type": "external", "label": "Reviewer", "sublabel": "Demo reviewer" },
+    { "id": "browser", "type": "frontend", "label": "React UI", "sublabel": "single ReviewPage" },
+    { "id": "api", "type": "backend", "label": "Express API", "sublabel": "document controller" },
+    { "id": "db", "type": "database", "label": "SQLite", "sublabel": "documents + events" },
+    { "id": "worker", "type": "backend", "label": "OCR worker", "sublabel": "in-process adapter" },
+    { "id": "files", "type": "database", "label": "Upload files", "sublabel": "images and PDFs" }
+  ],
+  "segments": [
+    { "from": 150, "to": 320, "label": "One undifferentiated document route" },
+    { "from": 400, "to": 660, "label": "Reprocess and background completion" }
+  ],
+  "messages": [
+    { "id": "open-document", "from": "reviewer", "to": "browser", "y": 170, "label": "open /documents/:id" },
+    { "id": "load-document", "from": "browser", "to": "api", "y": 205, "label": "GET /api/documents/:id" },
+    { "id": "read-document", "from": "api", "to": "db", "y": 235, "label": "read current revision + events" },
+    { "id": "return-detail", "from": "db", "to": "api", "y": 265, "label": "document detail", "variant": "return" },
+    { "id": "render-detail", "from": "api", "to": "browser", "y": 295, "label": "200 JSON", "variant": "return" },
+    { "id": "load-source", "from": "browser", "to": "files", "y": 335, "label": "GET source through <img>", "variant": "emphasis", "note": "PDF bytes are accepted but an image element cannot render them; page controls stay active no-ops." },
+    { "id": "request-reprocess", "from": "reviewer", "to": "browser", "y": 420, "label": "Reprocess approved document" },
+    { "id": "post-reject", "from": "browser", "to": "api", "y": 455, "label": "POST /documents/:id/reject", "variant": "emphasis" },
+    { "id": "queue-attempt", "from": "api", "to": "db", "y": 485, "label": "processing.queued + Processing" },
+    { "id": "wrong-event", "from": "api", "to": "db", "y": 515, "label": "draft.rejected (always)", "variant": "emphasis", "note": "Live trace shows this event even when the source status is Approved." },
+    { "id": "run-model", "from": "api", "to": "worker", "y": 590, "label": "fire-and-forget processAttempt", "variant": "dashed", "note": "A restart does not scan or resume queued/running attempts." },
+    { "id": "complete", "from": "worker", "to": "db", "y": 640, "label": "revision + Draft", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Observed drift",
+      "items": [
+        "Every document subview shares /documents/:id",
+        "PDF review reports a zero-size image",
+        "Approved reprocess is logged as Draft Rejected",
+        "A running attempt remained stuck across restart"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Trace basis",
+      "items": [
+        "Ego Lite feature audit on localhost:4173",
+        "Live document event history on 4 November 2026",
+        "Working tree is uncommitted; source links are intentionally omitted"
+      ]
+    }
+  ]
+}
